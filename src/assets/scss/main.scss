@@ -1,0 +1,31 @@
+@mixin flex-row() {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+@mixin truncate-text($max-lines: 2) {
+/* 必须结合 display: -webkit-box 或 display: flex 使用 */
+    display: -webkit-box;
+    -webkit-line-clamp: $max-lines; /* 显示两行 */
+    -webkit-box-orient: vertical; /* 使文本垂直排列 */
+
+    /* 兼容其他浏览器的通用方法 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 注意：white-space: nowrap 会导致文本在同一行内显示省略号，而非限制行数 */
+    word-break: break-all; /* 或者使用 word-wrap: break-word; 根据需要调整换行 */
+}
+
+* {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+:root {
+    --param-color: #FF4F00;
+}
+  
+$param: var(--param-color);
+  

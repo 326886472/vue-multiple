@@ -1,0 +1,375 @@
+div {
+    word-wrap: break-word;
+}
+
+* {
+    font-family: PingFangSC, PingFang SC;
+    font-style: normal;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+.card {
+  background: #f4f4f4;
+  border-radius: 10px;
+  @include flex-row();
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  .card_content_box {
+    width: calc(100% - 22px);
+    margin: 11px;
+  }
+  .card_content {
+    cursor: pointer;
+    width: 100%;
+    min-width: 328px;
+    min-height: 136px;
+    max-height: 500px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    color: $param;
+    padding: 11px 17px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    .top {
+      @include flex-row();
+      justify-content: space-between;
+    }
+    .time_box, .select1, .select2, .percent_box {
+        span {
+            font-weight: 400;
+            font-size: 12px;
+            color: #999999;
+            line-height: 17px;
+            text-align: left;
+        }
+        .percent {
+          @include flex-row();
+          display: inline-flex;
+          .num {
+            font-size: 12px;
+            color: $param;
+            margin-left: 6px;
+          }
+          .line {
+            width: 50px;
+            height: 5px;
+            background: #EEEEEE;
+            border-radius: 18px;
+            overflow: hidden;
+            margin-left: 5px;
+            .line_ {
+              height: 100%;
+              background: $param;
+              border-radius: 18px;
+
+            }
+          }
+
+        }
+        .block {
+            width: 6px;
+            height: 6px;
+            margin-left: 8px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .text {
+            font-weight: 400;
+            font-size: 14px;
+            color: #333333;
+            line-height: 17px;
+            text-align: left;
+            margin-left: 8px;
+        }
+    }
+
+    .glass {
+      width: 100%;
+      height: 119px;
+      background: linear-gradient( 180deg, rgba(255,255,255,0) 0%, #FFFFFF 100%);
+      border-radius: 10px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    // 列表样式 start
+    .floor1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .floor1_l {
+            flex: 1;
+            @include flex-row;
+            margin-top: 11px;
+
+            .p_title {
+                width: 91px;
+                height: 35px;
+                background: #FFF5F1;
+                border-radius: 22px;
+
+                font-weight: 500;
+                font-size: 14px;
+                color: #FF4F00;
+                line-height: 35px;
+                text-align: center;
+            }
+            .sync_line {
+              @include flex-row;
+              .line {
+                width: 17px;
+                height: 1px;
+                background: #FFD4C3;
+              }
+              .dot {
+                width: 3px;
+                height: 3px;
+                background: #FFD4C3;
+                border-radius: 50%;
+              }
+            }
+            .addWeekTarget {
+              margin-left: 4px;
+              font-weight: 500;
+              font-size: 14px;
+              color: #666;
+              line-height: 20px;
+              cursor: pointer;
+              max-width: 200px;
+              @include truncate-text(1)
+            }
+        }
+    }
+    .isDone {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        border: 1px solid #BEBEBE;
+        margin-right: 7px;
+        box-sizing: border-box
+    }
+
+    .isDone.done {
+        border: none;
+        background-image: url('../img/check.png');
+    }
+
+    .plan_input {
+        margin-top: 18px;
+        position: relative;
+        padding-bottom: 13px;
+        @include flex-row();
+        ::before {
+            position: absolute;
+            width: 100%;
+            content: '';
+            bottom: 0px;
+            left: 0;
+            border-bottom: 1px dashed #D6D6D6 !important;
+        }
+
+        .input_text::before {
+            position: absolute;
+            width: 100%;
+            content: '';
+            bottom: -13px;
+            border-bottom: 1px solid #D6D6D6;
+            left: 0;
+        }
+
+        :deep {
+            .el-textarea__inner {
+
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+                text-align: left;
+
+                outline: none;
+                box-shadow: none;
+                color: #333333;
+                resize: none;
+                padding: 5px 0;
+
+                ::placeholder {
+                    color: #999999;
+                }
+            }
+        }
+    }
+    .text {
+      font-weight: 400;
+      font-size: 14px;
+      color: #333333;
+      line-height: 20px;
+      text-align: left;
+      // width: 88%;
+
+      // margin-left: 8px;
+      }
+
+      .active_list_item::before {
+          position: absolute;
+          width: 100%;
+          content: '';
+          bottom: 0;
+          left: 0;
+          border-bottom: 1px dashed #D6D6D6 !important;
+      }
+
+      .text2 {
+          font-size: 12px;
+          margin-left: 8px;
+          flex: 1;
+          line-height: 17px;
+          color: #333333;
+      }
+
+      .active_title {
+          width: 88px;
+          height: 24px;
+          background: #FFF5F1;
+          border-radius: 18px;
+
+          font-weight: 500;
+          font-size: 14px;
+          color: #FF4F00;
+          line-height: 24px;
+          text-align: center;
+
+          margin-right: 8px;
+      }
+
+      .active_list_item {
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            // min-height: 44px;
+            position: relative;
+            padding: 12px 0;
+
+            .active_title {
+                width: 88px;
+                height: 24px;
+                background: #FFF5F1;
+                border-radius: 18px;
+
+                font-weight: 400;
+                font-size: 12px;
+                color: #FF4F00;
+                line-height: 24px;
+                text-align: center;
+                margin-top: -3px;
+
+                margin-right: 8px;
+            }
+
+            :deep {
+                .el-textarea__inner {
+
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 25px;
+                    text-align: left;
+
+                    outline: none;
+                    box-shadow: none;
+                    color: #333333;
+                    resize: none;
+
+                    ::placeholder {
+                        color: #999999;
+                    }
+                }
+            }
+        }
+    // 列表样式 end
+  }
+
+  // 总结样式 start
+  .authorInfo {
+    width: 100%;
+    margin-top: 10px;
+    .f1 {
+      @include flex-row();
+      .tag {
+        width: 43px;
+        height: 17px;
+        border-radius: 5px;
+        border: 1px solid #F7B500;
+        font-weight: 500;
+        font-size: 12px;
+        color: #F7B500;
+        line-height: 17px;
+        text-align: center;
+      }
+      .tag.week {
+        color: #339DE0;
+        border: 1px solid #339DE0;
+      }
+      .time {
+        font-weight: 400;
+        font-size: 14px;
+        color: #333333;
+        line-height: 20px;
+        text-align: center;
+        margin-left: 10px;
+      }
+    }
+    .subject {
+      font-weight: 500;
+      font-size: 14px;
+      color: #333333;
+      line-height: 20px;
+      margin-top: 10px;
+      @include truncate-text(3);
+    }
+    .f2 {
+      margin-top: 15px;
+      @include flex-row();
+      .avatar {
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .name {
+        margin-left: 6px;
+      }
+      .zan {
+        margin-left: auto;
+        min-width: 35px;
+        @include flex-row();
+        .icon {
+          display: inline-block;
+          width: 21px;
+          height: 20px;
+          background-image: url('../img/消息点赞2icon备份 2@2x.png');
+          cursor: pointer;
+        }
+        .icon.active {
+            background-image: url('../img/消息点赞2icon备份 6@2x.png');
+        }
+        .num {
+          color: #999;
+          margin-left: 8px;
+        }
+        .num.active {
+          color: $param;
+        }
+
+      }
+
+    }
+  }
+  // 总结样式 end
+
+}

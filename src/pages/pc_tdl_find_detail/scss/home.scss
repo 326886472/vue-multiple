@@ -1,0 +1,419 @@
+* {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-family: PingFangSC, PingFang SC;
+}
+pre {
+  white-space: pre-wrap; /* 适用于现代浏览器 */
+  white-space: -moz-pre-wrap; /* Firefox 特定的旧语法 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 及以后版本 */
+  word-wrap: break-word; /* 非标准，但支持度较广，用于兼容老版本浏览器 */
+}
+
+    .header {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        font-weight: 600;
+        border-bottom: 1px solid #EBEBEB;
+        font-family: PingFangSC, PingFang SC;
+        font-weight: 600;
+        font-size: 20px;
+        color: #333333;
+        // background: #fff;
+        position: relative;
+
+        .line {
+            display: inline-block;
+            width: 4px;
+            height: 18px;
+            background-image: url(../img/矩形备份.png);
+            vertical-align: -1.5px;
+            margin-left: 15px;
+        }
+        span {
+            margin-left: 6px;
+        }
+    }
+
+// 列表样式 start
+.p_list {
+  min-width: 1114px;
+  width: 95%;
+  background: #FFFFFF;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 12px;
+  padding: 10px 16px;
+  box-sizing: border-box;
+}
+.sync_line {
+  @include flex-row;
+  .line {
+    width: 17px;
+    height: 1px;
+    background: #FFD4C3;
+  }
+  .dot {
+    width: 3px;
+    height: 3px;
+    background: #FFD4C3;
+    border-radius: 50%;
+  }
+}
+.floor1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .floor1_l {
+            flex: 1;
+            @include flex-row;
+            margin-top: 30px;
+
+            .p_title {
+                width: 91px;
+                height: 35px;
+                background: #FFF5F1;
+                border-radius: 22px;
+
+                font-weight: 500;
+                font-size: 14px;
+                color: #FF4F00;
+                line-height: 35px;
+                text-align: center;
+            }
+            .sync_line {
+              @include flex-row;
+              .line {
+                width: 17px;
+                height: 1px;
+                background: #FFD4C3;
+              }
+              .dot {
+                width: 3px;
+                height: 3px;
+                background: #FFD4C3;
+                border-radius: 50%;
+              }
+            }
+            .addWeekTarget {
+              margin-left: 4px;
+              font-weight: 500;
+              font-size: 14px;
+              color: #666;
+              line-height: 20px;
+              max-width: 200px;
+              @include truncate-text(1)
+            }
+        }
+        .time_box, .select1, .select2, .percent_box {
+                  .percent {
+                  @include flex-row();
+                  display: inline-flex;
+                  .num {
+                    font-size: 12px;
+                    color: #FF4F00;
+                    margin-left: 6px;
+                  }
+                  .line {
+                    width: 50px;
+                    height: 5px;
+                    background: #EEEEEE;
+                    border-radius: 18px;
+                    overflow: hidden;
+                    margin-left: 5px;
+                    .line_ {
+                      height: 100%;
+                      background: #FF4F00;
+                      border-radius: 18px;
+
+                    }
+                  }
+
+                }
+                margin-left: 21px;
+                span {
+                    font-weight: 400;
+                    font-size: 12px;
+                    color: #999999;
+                    line-height: 17px;
+                    text-align: left;
+                }
+                .text {
+                    font-weight: 400;
+                    font-size: 12px;
+                    color: #333333;
+                    line-height: 17px;
+                    text-align: left;
+                    margin-left: 8px !important;
+                }
+            }
+    }
+
+    .plan_input {
+        margin-top: 20px;
+        position: relative;
+        padding-bottom: 13px;
+        @include flex-row();
+        ::before {
+            position: absolute;
+            width: 100%;
+            content: '';
+            bottom: 0px;
+            left: 0;
+            border-bottom: 1px dashed #D6D6D6 !important;
+        }
+
+        .input_text::before {
+            position: absolute;
+            width: 100%;
+            content: '';
+            bottom: -13px;
+            border-bottom: 1px solid #D6D6D6;
+            left: 0;
+        }
+
+        :deep {
+            .el-textarea__inner {
+
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+                text-align: left;
+
+                outline: none;
+                box-shadow: none;
+                color: #333333;
+                resize: none;
+                padding: 5px 0;
+
+                ::placeholder {
+                    color: #999999;
+                }
+            }
+        }
+    }
+    .text {
+      font-weight: 400;
+      font-size: 18px;
+      color: #333333;
+      line-height: 25px;
+      text-align: left;
+      width: 100%;
+      margin: 0 !important;
+      margin-bottom: 16px !important;
+
+      }
+
+      .active_list_item::before {
+          position: absolute;
+          width: 100%;
+          content: '';
+          bottom: 0;
+          left: 0;
+          border-bottom: 1px dashed #D6D6D6 !important;
+      }
+
+      .text2 {
+          font-size: 14px;
+          line-height: 20px;
+          margin: 0;
+          width: 100%;
+          color: #333333;
+      }
+
+      .text2.text_done {
+          width: 91%;
+          color: #BBBBBB;
+      }
+      .active_title {
+          width: 88px;
+          height: 24px;
+          background: #FFF5F1;
+          border-radius: 18px;
+
+          font-weight: 500;
+          font-size: 14px;
+          color: #FF4F00;
+          line-height: 24px;
+          text-align: center;
+
+          margin-right: 8px;
+      }
+
+      .active_list_item {
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            min-height: 44px;
+            position: relative;
+            margin-top: 20px;
+            padding-bottom: 16px;
+
+            .active_title {
+                width: 88px;
+                height: 24px;
+                background: #FFF5F1;
+                border-radius: 18px;
+
+                font-weight: 400;
+                font-size: 12px;
+                color: #FF4F00;
+                line-height: 24px;
+                text-align: center;
+
+                margin-right: 8px;
+            }
+
+            :deep {
+                .el-textarea__inner {
+
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 25px;
+                    text-align: left;
+
+                    outline: none;
+                    box-shadow: none;
+                    color: #333333;
+                    resize: none;
+
+                    ::placeholder {
+                        color: #999999;
+                    }
+                }
+            }
+        }
+        .block {
+            width: 6px;
+            height: 6px;
+            margin-left: 8px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+// 列表样式 end
+
+.subject {
+  word-wrap: break-word;
+  padding: 18px 28px 23px 22px;
+}
+
+// header样式
+.content {
+  min-width: 1145px;
+  width: 95%;
+  margin: 12px auto;
+  background: #FAFAFA;
+  border-radius: 10px;
+
+  .header_ {
+    @include flex-row();
+      margin-left: 13px;
+      padding-top: 13px;
+
+    .user {
+      height: 40px;
+      margin-left: 5px;
+
+    }
+    .avatar {
+       width: 33px;
+       height: 33px;
+       border-radius: 50%;
+       overflow: hidden;
+    }
+    .f1, .f2 {
+      @include flex-row();
+      height: 50%;
+    }
+    .f1 {
+      .name{
+        font-size: 16px;
+          color: #333333;
+      }
+    }
+    .f2 {
+      .tag {
+        width: 41px;
+        height: 17px;
+        border-radius: 5px;
+        border: 1px solid #F7B500;
+        font-weight: 500;
+        font-size: 12px;
+        color: #F7B500;
+        line-height: 17px;
+        text-align: center;
+      }
+      .tag.week {
+        color: #339DE0;
+        border: 1px solid #339DE0;
+      }
+      .time {
+        height: 17px;
+        line-height: 17px;
+        margin-left: 10px;
+        font-weight: 400;
+        font-size: 14px;
+        color: #7F7F7F;
+        margin-left: 10px;
+      }
+
+    }
+  }
+}
+
+// 点赞
+.zan {
+  width: fit-content;
+  padding: 6px 14px;
+  height: 22px;
+  background: #F7F8FA;
+  border-radius: 32px;
+  @include flex-row();
+  margin: 0 auto;
+  cursor: pointer;
+  .icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-image: url('../img/底部点赞2icon@2x.png')
+  }
+  .zan_t {
+    font-family: PingFangSC, PingFang SC;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FF4F00;
+    line-height: 22px;
+    font-style: normal;
+    margin-left: 8px;
+  }
+}
+.zan.active {
+  span {
+    color: #fff;
+  }
+  background: #FF4F00;
+  .icon {
+    background-image: url('../img/底部点赞1icon@2x.png')
+  }
+}
+
+.empty_box {
+  @include flex-row();
+  flex-direction: column;
+  min-height: 750px;
+  .empty {
+    width: 188px;
+    height: 174px;
+    margin-top: 22px;
+  }
+  .empty_text {
+    font-weight: 400;
+    font-size: 16px;
+    color: #999999;
+    line-height: 22px;
+    margin-top: 22px;
+  }
+}

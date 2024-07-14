@@ -1,0 +1,516 @@
+p,h1{
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+.comment{
+    width: 100%;
+    background: #FFFFFF;
+    padding: 0 20px 20px;
+    box-sizing: border-box;
+}
+.commentHeader{
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 20px 2px;
+    position: sticky;
+    top: 0px;
+    background: #FFFFFF;
+    z-index: 99;
+}
+
+.commentHeader h1{
+    font-size: 20px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #333333;
+    display: flex;
+    align-items: center;
+}
+.commentHeader h1 img{
+    width: 4px;
+    height: 18px;
+    margin-right: 5px;
+}
+.commentHeader h1 span{
+    margin-left: 5px;
+}
+.commentHeader p{
+    width: 106px;
+    height: 30px;
+    background: #F7F8FA;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.commentHeader p a{
+    width: 48px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #999999;
+}
+.commentActive{
+    background: #FFFFFF;
+    border-radius: 24px;
+    color: #ff4f00 !important;
+}
+.comment .commentInput{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 0 0;
+}
+.comment .commentInput .tacitlyApproveImg{
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+}
+.comment .commentInput .tacitlyApproveImg img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.comment .commentInput .inputContent{
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.el-textarea__inner{
+    width: 100%;
+    max-height: 106px !important;
+    background: #F7F8FA;
+    padding: 10px 40px 0 14px;
+    border: unset;
+    resize: none;
+    min-height: 40px !important;
+}
+.comment .commentInput .inputContent img{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+}
+.comment .commentInput .inputBtn{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 16px;
+}
+.comment .commentInput .inputBtn button{
+    width: 72px;
+    height: 40px;
+    background: #FF4F00;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #FFFFFF;
+    border: unset;
+    cursor: pointer;
+}
+.noComments{
+    background: #FFFFFF;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #C1C1C1;
+    padding: 30px 0 100px;
+}
+.comment .noComments img{
+    width: 60px;
+    height: 56px;
+    margin-right: 10px;
+}
+.sampleExpression{
+    display: none;
+    width: 310px;
+    height: 220px;
+    background: rgba(0,0,0,0.7);
+    overflow-y: scroll;
+    border-radius: 20px;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 65px;
+    right: -35px;
+    z-index: 1080;
+}
+.sampleExpression span{
+    display: inline-block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+.san_jiao{
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-top-color: rgba(0,0,0,0.7);
+    position: absolute;
+    right: 11px;
+    bottom: 35px;
+    display: none;
+    z-index: 1080;
+}
+.comment .commentContent{
+    padding: 30px 0 0;
+}
+.comment .commentContent .commentContentHead{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.report{
+    position: absolute;
+    right: -20px;
+    bottom: 40px;
+    width: 180px;
+    height: 119px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    padding: 20px 16px;
+    flex-direction: column;
+    align-items: flex-start !important;
+    z-index: 1080;
+}
+.report div:first-child{
+    width: 100%;
+    justify-content: space-between !important;
+    font-size: 14px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #333333;
+}
+.report .reportBtn{
+    display: flex;
+    align-items: center;
+    margin-top: 22px;
+    cursor: pointer;
+}
+.report .reportBtn img{
+    margin-right: 6px;
+}
+.report .sanJiao{
+    border: 7px solid transparent;
+    width: 0;
+    height: 0;
+    border-top-color: #FFFFFF;
+    position: absolute;
+    bottom: -14px;
+    right: 24px;
+}
+.comment .commentContent .commentContentHead img{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.comment .commentContent .commentContentHead div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.comment .commentContent .commentContentHead div p img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: unset;
+}
+.comment .commentContent .commentContentHead div h1{
+    font-size: 16px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #333333;
+    margin-left: 10px;
+}
+.comment .commentContent .commentContentHead div h1 img{
+    width: 46px;
+    height: 22px;
+    margin-left: 10px;
+}
+.comment .commentContent .contentText{
+    font-size: 16px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #333333;
+    line-height: 30px;
+    margin-top: 16px;
+    word-break: break-word;
+}
+.commentContentHide{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.comment .commentContent .spread{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: -5px;
+}
+.comment .commentContent .spread div{
+    font-size: 16px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FF4F00;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.comment .commentContent .spread div img{
+    width: 20px;
+    height: 20px;
+}
+.comment .commentContent .commentBtn{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+}
+.comment .commentContent .commentBtn .left{
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #666666;
+}
+.comment .commentContent .commentBtn .right{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #666666;
+}
+.comment .commentContent .commentBtn .right div{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.comment .commentContent .commentBtn .right div img{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+.comment .commentContent .commentBtn .right div p{
+    min-width: 10px;
+    text-align: center;
+}
+.comment .commentContent .commentBtn .right span{
+    font-size: 16px;
+    color: #EBEBEB;
+    margin: 0 30px;
+}
+.comment .commentContent .childComments{
+    width: 100%;
+    padding: 20px;
+    background: #F5F6F8;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+.comment .commentContent .childComments .childCommentsCont{
+    border-bottom: 1px dashed #DDDDDD;
+    padding: 0 0 16px;
+    margin-bottom: 16px;
+}
+.comment .commentContent .childComments .childCommentsCont .commentsContTitle{
+    width: 100%;
+    font-size: 16px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #666666;
+    line-height: 30px;
+    word-break: break-all;
+}
+.comment .commentContent .childComments .childCommentsCont .commentsContBtn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #999999;
+    margin-top: 10px;
+    position: relative;
+}
+.comment .commentContent .childComments .childCommentsCont .commentsContBtn div{
+    display: flex;
+    align-items: center;
+    color: #666666;
+}
+.comment .commentContent .childComments .childCommentsCont .commentsContBtn div p{
+    cursor: pointer;
+}
+.comment .commentContent .childComments .childCommentsCont .commentsContBtn div img{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.comment .commentContent .childComments .allComments{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #D0936F;
+}
+.comment .commentContent .childComments .allComments p img{
+    width: 15px;
+    height: 15px;
+    margin-left: 3px;
+}
+.comment .commentContent .addComment{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.comment .commentContent .addComment .addCommentInput{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.comment .commentContent .addComment .addCommentInput input{
+    width: 100%;
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    border: 1px solid #DDDDDD;
+    padding-left: 14px;
+    padding-right: 40px;
+}
+.comment .commentContent .addComment .addCommentInput input::placeholder{
+    font-size: 16px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #CCCCCC;
+}
+.comment .commentContent .addComment .addCommentInput img{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 14px;
+    cursor: pointer;
+}
+.comment .commentContent .addComment .addCommentBtn{
+    display: flex;
+    align-items: center;
+    margin-left: 14px;
+}
+.comment .commentContent .addComment .addCommentBtn button{
+    width: 68px;
+    height: 40px;
+    border-radius: 6px;
+    border: unset;
+    font-size: 16px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+}
+.comment .commentContent .addComment .addCommentBtn .deleteBrn{
+    background: #EBEBEB;
+    color: #666666;
+}
+.comment .commentContent .addComment .addCommentBtn .replyBtn{
+    background: #FF4F00;
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+/*element样式修改*/
+.el-message-box__status.el-icon-warning{
+    color: #ff4f00;
+}
+.el-message-box{
+    width: 400px;
+    height: 185px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.14);
+    border: unset;
+    padding: 30px;
+}
+.el-message-box__header,
+.el-message-box__content,
+.el-message-box__btns{
+    padding: 0;
+}
+.el-message-box__headerbtn{
+    top: 0;
+}
+.el-message-box__content{
+    margin-top: 14px;
+}
+.el-message-box__btns{
+    margin-top: 37px;
+}
+.el-message-box__btns button:nth-child(1){
+    background: #FFFFFF;
+    border-radius: 4px;
+    border: 1px solid #D8D8D8;
+    color: #333333;
+}
+.el-message-box__btns button:nth-child(2){
+    color: #FFF;
+    background-color: #FF4F00;
+    border-color: #FF4F00;
+}
+#userHomeSeeMore{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+#userHomeSeeMore a{
+    font-size: 16px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FF4F00;
+}
+
+.el-message-box__status.el-icon-warning{
+    color: #ff4f00 !important;
+}
+
+.el-message-box__status.el-icon-warning{
+    color: #ff4f00 !important;
+}
+/* .addCommentInput input:focus {
+    box-shadow: 0 0 0 1px #ccc inset !important;
+} */
+.revertSmilingInput_grey {
+    /* border: none !important; */
+    outline: none;
+}
+.revertSmilingInput_grey:focus {
+    box-shadow: 0 0 0 1px #ccc inset !important;
+}
+
+.noMore, .loadMore {
+    text-align: center;
+  }

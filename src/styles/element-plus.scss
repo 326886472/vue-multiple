@@ -1,0 +1,9 @@
+
+@import 'element-plus/dist/index.css';
+
+:root {
+  --color-primary: #FF4F00;
+  --el-input-focus-border-color: #FF4F00;
+  --van-primary-color: var(--color-primary) !important;
+  --van-button-default-height: 36px;
+}

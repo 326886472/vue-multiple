@@ -1,0 +1,236 @@
+.importBox {
+    position: relative;
+    display: flex;   
+    flex-direction: column;
+    height: 100%;
+}
+pre {
+    white-space: pre-wrap;
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333333;
+    line-height: 18px;
+    width: 100%;
+}
+.content_text {
+    margin: 9px 0;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333333;
+    line-height: 20px;
+    @include truncate-text(5);
+    .unfolded {
+        color: #FF4F00;
+        cursor: pointer;
+    }
+}
+.content_text_unfolded {
+    margin: 9px 0;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333333;
+    line-height: 20px;
+    .unfolded {
+        color: #FF4F00;
+        cursor: pointer;
+    }
+}
+
+.title {
+    @include flex-row();
+    position: relative;
+    justify-content: space-between;
+    margin-bottom: 20px;    
+    .close {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-image: url(../img/close2.png);
+        right: 9px;
+        top: 3px;
+        cursor: pointer;
+    }
+}
+
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    span {
+        font-weight: 500;
+        font-size: 14px;
+        color: #6D6D6D;
+        margin-bottom: 14px;
+    }
+    button {
+        width: 100%;
+        height: 40px;
+    }
+}
+
+.list {
+    flex: 1;
+    overflow: scroll;
+    .item {
+        margin-top: 20px;
+        .top {
+            @include flex-row();
+            align-items: center;
+            .loadAll {
+                width: 8px;
+                height: 11px;
+                cursor: pointer;
+                background-image: url('../img/折叠@2x.png');
+                margin-left: 3px;
+            }
+            .loadAll.active {
+                transform:rotate(90deg);
+            }
+            .loadAll:hover {
+                background-image: url('../img/折叠-滑过@2x.png');
+            }
+            .checkAll {
+                margin-left: 8px;
+                width: 18px;
+                height: 18px;
+                background-image: url('../img/未选@2x.png');
+                cursor: pointer;
+            }
+            .checkAll.active {
+                background-image: url('../img/check.png');
+            }
+            .top_title {
+                margin-left: 8px;
+                font-weight: 600;
+                font-size: 14px;
+                color: #333333;
+            }
+            .num {
+                font-weight: 600;
+                font-size: 14px;
+                color: #999999;
+                margin-left: 15px;
+            }
+        }
+        .content {
+            margin-top: 12px;
+            margin-left: 19px;
+            width: calc(100% - 19px);
+            
+
+            .item_probably {
+                font-weight: 400;
+                font-size: 14px;
+                color: #999999;
+                line-height: 20px;
+                @include truncate-text(2)
+            }
+            .item_list {
+                // padding-bottom: 15px;
+                border-bottom: 1px solid #D6D6D6;
+            }
+            
+            .item_list_top {
+                @include flex-row();
+                .is_check {
+                    width: 18px;
+                    height: 18px;
+                    background-image: url('../img/未选@2x.png');
+                    cursor: pointer;
+                }
+                .is_check.active {
+                    background-image: url('../img/check.png');
+                }
+                .item_text {
+                    margin-left: 8px;
+                    height: 24px;
+                    padding: 0 7px;
+                    background: #FFE6D3;
+                    border-radius: 8px;
+                    font-weight: 500;
+                    font-size: 12px;
+                    color: #E84800;
+                    line-height: 24px;
+                }
+                .time, .type, .level {
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #999999;
+                    margin-left: 21px;
+                    span {
+                        color: #333333;
+                    }
+                }
+                .time {
+                    margin-left: 10px;
+                }
+                .level {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    .block {
+                        width: 6px;
+                        height: 6px;
+                        border-radius: 1px;
+                        margin-left: 8px;
+                    }
+                    span {
+                        margin-left: 3px;
+                    }
+                }
+            }
+
+            .summary {
+                .text {
+
+                }
+                .item_text {
+                    margin-left: 8px;
+                    height: 24px;
+                    padding: 0 7px;
+                    background: #E3F0DB;
+                    border-radius: 8px;
+                    font-weight: 500;
+                    font-size: 12px;
+                    color: #297E3B;
+                    line-height: 24px;
+                }
+            }
+
+        }
+    }
+}
+
+.list_empty {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .empty {
+        width: 70px;
+        height: 74px;
+        background-image: url(../img/wuicon@2x.png);
+    }
+    span {
+        margin-top: 25px;
+        font-weight: 400;
+        font-size: 16px;
+        color: #999;
+    }
+}
+.noMore {
+    text-align: center;
+}
+.content_text2 {
+    margin-top: 9px;
+    margin-bottom: 12px;
+}
+#importTargetList::-webkit-scrollbar {
+    display: auto-flow-col;
+}

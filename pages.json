@@ -1,0 +1,54 @@
+[
+  {
+    "path": "404",
+    "title": "404-页面未找到"
+  },
+  {
+    "path": "ai_consult",
+    "title": "咨询百宝箱"
+  },
+  {
+    "path": "ai_index",
+    "title": "智能百宝箱"
+  },
+  {
+    "path": "chrome",
+    "title": "下载 chrome 浏览器"
+  },
+  {
+    "path": "finger",
+    "title": "指纹"
+  },
+  {
+    "path": "index",
+    "title": "首页"
+  },
+  {
+    "path": "pc_studentEntry",
+    "title": "学员录入"
+  },
+  {
+    "path": "signIn",
+    "title": "签到"
+  },
+  {
+    "path": "tdl",
+    "title": "TDL"
+  },
+  {
+    "path": "tdl_find",
+    "title": "发现广场"
+  },
+  {
+    "path": "tdl_find_detail",
+    "title": "发现"
+  },
+  {
+    "path": "tdl_inspiration",
+    "title": "填写助手"
+  },
+  {
+    "path": "vote",
+    "title": "投票"
+  }
+]

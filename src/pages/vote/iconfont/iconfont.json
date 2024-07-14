@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "129781858",
+      "name": "option-plus@2x",
+      "font_class": "a-option-plus2x",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "129781856",
+      "name": "option@2x",
+      "font_class": "a-option2x",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "129781854",
+      "name": "plus@2x",
+      "font_class": "a-plus2x",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    }
+  ]
+}

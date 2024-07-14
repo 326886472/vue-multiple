@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="icon" href="./favicon.ico" />
+  <title>投票</title>
+  <style>
+    html,
+    body {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      background-color: #FFFFFF;
+    }
+
+    .skeleton_screen {
+      width: 100vw;
+      height: 100vh;
+      padding: 0 15px 0;
+      box-sizing: border-box;
+    }
+
+    .skeleton_screen * {
+      box-sizing: border-box;
+    }
+
+    .skeleton_screen_bg {
+      background-color: #F4F4F4;
+    }
+
+    .skeleton_screen_header {
+      height: 50px;
+      display: flex;
+      align-items: center;
+    }
+
+    .skeleton_screen_header_left.van-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .skeleton_screen_header_left {
+      width: 22px;
+      height: 22px;
+    }
+
+    .skeleton_screen_header_right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .skeleton_screen_header_title {
+      height: 22px;
+      margin: 0 auto;
+      color: #333;
+      font-weight: 600;
+      font-size: 4.26667vw;
+    }
+
+    .skeleton_screen_item {
+      height: 69px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid #F7F8FA;
+    }
+
+    .skeleton_screen_item_left {
+      width: 44px;
+      height: 16.5px;
+      border-radius: 8px;
+    }
+
+    .skeleton_screen_item_right {
+      width: 268px;
+      height: 16.5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+  </div>
+  <div class="skeleton_screen" id="skeleton_screen">
+    <div class="skeleton_screen_header">
+      <div class="skeleton_screen_header_left van-badge__wrapper van-icon van-icon-cross"></div>
+      <div class="skeleton_screen_header_right">
+        <div class="skeleton_screen_header_title">投票</div>
+      </div>
+    </div>
+    <div class="skeleton_screen_item">
+      <div class="skeleton_screen_item_left skeleton_screen_bg"></div>
+      <div class="skeleton_screen_item_right skeleton_screen_bg"></div>
+    </div>
+    <div class="skeleton_screen_item">
+      <div class="skeleton_screen_item_left skeleton_screen_bg"></div>
+      <div class="skeleton_screen_item_right skeleton_screen_bg"></div>
+    </div>
+    <div class="skeleton_screen_item">
+      <div class="skeleton_screen_item_left skeleton_screen_bg"></div>
+      <div class="skeleton_screen_item_right skeleton_screen_bg"></div>
+    </div>
+    <div class="skeleton_screen_item">
+      <div class="skeleton_screen_item_left skeleton_screen_bg"></div>
+      <div class="skeleton_screen_item_right skeleton_screen_bg"></div>
+    </div>
+    <div class="skeleton_screen_item">
+      <div class="skeleton_screen_item_left skeleton_screen_bg"></div>
+      <div class="skeleton_screen_item_right skeleton_screen_bg"></div>
+    </div>
+  </div>
+  <script type="module" src="./vote/main.ts"></script>
+</body>
+
+</html>

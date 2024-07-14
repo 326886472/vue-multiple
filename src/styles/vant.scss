@@ -1,0 +1,8 @@
+
+@import 'vant/lib/index.css';
+
+:root {
+  --color-primary: #FF4F00;
+  --van-primary-color: var(--color-primary) !important;
+  --van-button-default-height: 36px;
+}
